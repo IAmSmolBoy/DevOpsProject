@@ -51,7 +51,7 @@ public class seleniumTest {
 	  System.setProperty("webdriver.chrome.driver", chromeDriverDir);
 
 	  //initialize FirefoxDriver at the start of test
-	  webDriver = new ChromeDriver();  
+	  webDriver = new ChromeDriver();
   }
 
   @AfterTest
