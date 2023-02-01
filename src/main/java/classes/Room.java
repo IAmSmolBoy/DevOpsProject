@@ -1,11 +1,11 @@
 package classes;
 
 public class Room {
-	String roomName;
-	int rate;
-	int price;
-	String img;
-	String description;
+	private String roomName;
+	private int rate;
+	private int price;
+	private String img;
+	private String description;
 	
 	public Room(String roomName, int rate, int price, String img, String description) {
 		super();
