@@ -3,7 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="test.selenium.seleniumTest"/>
+      <class name="selenium.seleniumTest"/>
+      <class name=".RoomCollectionTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
