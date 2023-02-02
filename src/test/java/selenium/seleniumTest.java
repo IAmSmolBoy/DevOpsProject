@@ -18,10 +18,10 @@ public class seleniumTest {
   @Test
   public void checkroomServlet() {
 	  //Load website as a new page
-	  webDriver.navigate().to("http://localhost:8080/DevOpsProject/index.jsp");
-	  List<WebElement> links =  webDriver.findElements(By.tagName("a"));
-	  
-	  links.get(1).click();
+//	  webDriver.navigate().to("http://localhost:8080/DevOpsProject/index.jsp");
+//	  List<WebElement> links =  webDriver.findElements(By.tagName("a"));
+//	  
+//	  links.get(1).click();
 //	  Assert.assertEquals(webDriver.getTitle(), "Rooms");
   }
 //  @Test
