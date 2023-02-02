@@ -1,4 +1,6 @@
 package test.selenium;
+import java.util.List;
+
 import org.openqa.selenium.By;
 //import necessary Selenium WebDriver classes
 import org.openqa.selenium.WebDriver;
@@ -14,31 +16,31 @@ public class seleniumTest {
   private WebDriver webDriver;		
   
   @Test
-  public void checkId() {
+  public void checkroomServlet() {
 	  //Load website as a new page
-	  webDriver.navigate().to("https://devopsessentials.github.io");
-	  WebElement we =  webDriver.findElement(By.id("content"));
+	  webDriver.navigate().to("http://localhost:8080/DevOpsProject/index.jsp");
+	  List<WebElement> links =  webDriver.findElements(By.tagName("a"));
 	  
-	  System.out.println("id we: "+we.getAttribute("role"));
-	  Assert.assertEquals(we.getAttribute("role"), "contentinfo");
+	  links.get(1).click();
+	  Assert.assertEquals(webDriver.getTitle(), "Rooms");
   }
-  @Test
-  public void checkTitle() {
-	  //Load website as a new page
-	  webDriver.navigate().to("https://devopsessentials.github.io");
-	  
-	  //Assert the title to check that we are indeed in the correct website
-	  Assert.assertEquals(webDriver.getTitle(), "Home");
-	  
-	  System.out.println("title: "+webDriver.getTitle());
-	  
-	  //Retrieve link using it's class name and click on it
-	  webDriver.findElement(By.className("link")).click();
-
-	  //Assert the new title to check that the title contain Wikipedia and the button had successfully bring us to the new page
-	  Assert.assertTrue(webDriver.getTitle().contains("Wikipedia"));
-	  System.out.println("new title: "+webDriver.getTitle());
-  }
+//  @Test
+//  public void checkTitle() {
+//	  //Load website as a new page
+//	  webDriver.navigate().to("https://devopsessentials.github.io");
+//	  
+//	  //Assert the title to check that we are indeed in the correct website
+//	  Assert.assertEquals(webDriver.getTitle(), "Home");
+//	  
+//	  System.out.println("title: "+webDriver.getTitle());
+//	  
+//	  //Retrieve link using it's class name and click on it
+//	  webDriver.findElement(By.className("link")).click();
+//
+//	  //Assert the new title to check that the title contain Wikipedia and the button had successfully bring us to the new page
+//	  Assert.assertTrue(webDriver.getTitle().contains("Wikipedia"));
+//	  System.out.println("new title: "+webDriver.getTitle());
+//  }
   
   
   
