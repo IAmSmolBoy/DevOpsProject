@@ -174,7 +174,7 @@ nav a:last-child {
 <title>Lazy Hotels</title>
 </head>
 <nav>
-  <a href="index.jsp" class="active">Home</a>
+  <a href="index.jsp" class="active">Homes</a>
   <a href="roomServlet">Rooms</a>
   <a href="shops.jsp">Shops</a>
   <a href="contactus.jsp">Contacts</a>

@@ -21,8 +21,8 @@ public class seleniumTest {
 	  webDriver.navigate().to("http://localhost:8090/DevOpsProject/index.jsp");
 	  List<WebElement> links =  webDriver.findElements(By.tagName("a"));
 	  
-//	  links.get(1).click();
-//	  Assert.assertEquals(webDriver.getTitle(), "Rooms");
+	  links.get(1).click();
+	  Assert.assertEquals(webDriver.getTitle(), "Rooms");
   }
 //  @Test
 //  public void checkTitle() {
