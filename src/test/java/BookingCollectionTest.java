@@ -36,11 +36,6 @@ class BookingCollectionTest {
 	}
 
 	@Test
-	void testBookingCollection() {
-		fail("Not yet implemented");
-	}
-
-	@Test
 	void testGetbookings() {
 		List<Booking> testBc = bc.getbookings();
 		return;

@@ -11,7 +11,6 @@ public class BookingCollection {
 //		super();
 //		this.bookings = bookings;
 //		this.capacity = 5;
-//
 //	}
 	
 	public BookingCollection() {
