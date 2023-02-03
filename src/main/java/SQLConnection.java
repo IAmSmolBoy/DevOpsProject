@@ -24,7 +24,6 @@ public class SQLConnection {
     		Class.forName("com.mysql.jdbc.Driver");
 //    		con = DriverManager.getConnection(url + dbName, userName, password);
     		con = DriverManager.getConnection("jdbc:mysql://3.219.159.250:3306/hotelsdb", "admin", "password");
-    		System.out.print(con);
     		if (con == null) {
         		System.out.print("Connection timed out");
     		}
@@ -91,7 +90,7 @@ public class SQLConnection {
     
     public int deleteFromTable(String dbName, Map<String, String[]> params) throws SQLException, IOException, ServletException {
     	String paramKey = (String) params.keySet().toArray()[0];
-    	return addToPS("delete from " + dbName + " where " + paramKey + " = " + params.get(paramKey), params).executeUpdate();
+    	return addToPS("delete from " + dbName + " where " + paramKey + " = ?", params).executeUpdate();
     }
 
 }
