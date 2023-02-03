@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import classes.Booking;
 import classes.BookingCollection;
+import classes.User;
 
 class BookingCollectionTest {
 	private BookingCollection bc;
@@ -37,6 +38,7 @@ class BookingCollectionTest {
 	@Test
 	void testGetbookings() {
 		List<Booking> testBc = bc.getbookings();
+		assertEquals(testBc.size(), BOOKING_COLLECTION_SIZE);
 		return;
 	}
 
@@ -47,15 +49,25 @@ class BookingCollectionTest {
 		bc.addbooking(b1);
 		assertEquals(bc.getbookings().size(), BOOKING_COLLECTION_SIZE+1);
 	}
-
+	
 	@Test
 	void testEditbooking() {
-		fail("Not yet implemented");
+		List<Booking> testBc = bc.getbookings();
+		assertEquals(testBc.size(), BOOKING_COLLECTION_SIZE);
+		int indexedit = 0;
+		Booking editbooking = new Booking("Aloy2", "Marina Bay", null, null);
+		bc.editbooking(indexedit, editbooking);
+		assertEquals(bc.getbookings().get(indexedit), editbooking);
 	}
 
 	@Test
 	void testDeletebooking() {
-		fail("Not yet implemented");
+		List<Booking> testBc = bc.getbookings();
+		int indexdelete = 0;
+		bc.deletebooking(indexdelete);
+		assertEquals(bc.getbookings().size(), BOOKING_COLLECTION_SIZE-1);
+	
 	}
+
 
 }

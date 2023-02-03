@@ -1,12 +1,14 @@
-package classes;
-
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import classes.User;
+import classes.UserCollection;
 
 class UserCollectionTest {
 	
@@ -16,6 +18,7 @@ class UserCollectionTest {
 	private User u3;
 	private User u4;
 	private final int USER_COLLECTION_SIZE = 4;
+	private ArrayList<User> users = new ArrayList<>();
 
 	@BeforeEach
 	void setUp() throws Exception {
@@ -37,29 +40,36 @@ class UserCollectionTest {
 	@Test
 	void testGetusers() {
 		List<User> testUc = uc.getusers();
+		assertEquals(testUc.size(), USER_COLLECTION_SIZE);
 		return;
 	}
 
 	@Test
 	void testAdduser() {
-		List<User> testBc = uc.getusers();
-		assertEquals(testBc.size(), USER_COLLECTION_SIZE);
+		List<User> testUc = uc.getusers();
+		assertEquals(testUc.size(), USER_COLLECTION_SIZE);
 		uc.adduser(u1);
 		assertEquals(uc.getusers().size(), USER_COLLECTION_SIZE+1);
 	}
+	
 
 	@Test
 	void testEdituser() {
-//		fail("Not yet implemented");
-		List<User> testBc = uc.getusers();
-		assertEquals(testBc.size(), USER_COLLECTION_SIZE);
-		uc.edituser(USER_COLLECTION_SIZE, u1);
-		assertEquals(uc.getusers(), USER_COLLECTION_SIZE);
+		List<User> testUc = uc.getusers();
+		assertEquals(testUc.size(), USER_COLLECTION_SIZE);
+		int indexedit = 0;
+		User edituser = new User("Aloy2", "Aloy2@gmail.com", "234");
+		uc.edituser(indexedit, edituser);
+		assertEquals(uc.getusers().get(indexedit), edituser);
 	}
 
 	@Test
 	void testDeleteuser() {
-		fail("Not yet implemented");
+		List<User> testUc = uc.getusers();
+		int indexdelete = 0;
+		uc.deleteuser(indexdelete);
+		assertEquals(uc.getusers().size(), USER_COLLECTION_SIZE-1);
+	
 	}
 
 }
