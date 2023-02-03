@@ -24,25 +24,6 @@ public class seleniumTest {
 	  links.get(1).click();
 	  Assert.assertEquals(webDriver.getTitle(), "Rooms");
   }
-//  @Test
-//  public void checkTitle() {
-//	  //Load website as a new page
-//	  webDriver.navigate().to("https://devopsessentials.github.io");
-//	  
-//	  //Assert the title to check that we are indeed in the correct website
-//	  Assert.assertEquals(webDriver.getTitle(), "Home");
-//	  
-//	  System.out.println("title: "+webDriver.getTitle());
-//	  
-//	  //Retrieve link using it's class name and click on it
-//	  webDriver.findElement(By.className("link")).click();
-//
-//	  //Assert the new title to check that the title contain Wikipedia and the button had successfully bring us to the new page
-//	  Assert.assertTrue(webDriver.getTitle().contains("Wikipedia"));
-//	  System.out.println("new title: "+webDriver.getTitle());
-//  }
-  
-  
   
   @BeforeTest
   public void beforeTest() {
@@ -59,7 +40,7 @@ public class seleniumTest {
   @AfterTest
   public void afterTest() {
 	  //Quit the ChromeDriver and close all associated window at the end of test
-	  webDriver.quit();			
+	  webDriver.quit();
   }
 
 }
