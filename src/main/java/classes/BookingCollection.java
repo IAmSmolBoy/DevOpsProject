@@ -6,7 +6,6 @@ import java.util.List;
 public class BookingCollection {
 	private ArrayList<Booking> bookings = new ArrayList<>();
 	private int capacity;
-
 //	public BookingCollection(ArrayList<Booking> bookings) {
 //		super();
 //		this.bookings = bookings;

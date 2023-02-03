@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserCollection {
-	
 	private ArrayList<User> users = new ArrayList<>();
 	private int capacity;
 //	public UserCollection(ArrayList<User> users) {
@@ -19,7 +18,7 @@ public class UserCollection {
 	public UserCollection(int capacity) {
 		this.capacity = capacity;
 	}
-
+	
 	public List<User> getusers() {
 		return users;
 	}

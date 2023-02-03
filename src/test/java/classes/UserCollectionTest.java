@@ -9,6 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class UserCollectionTest {
+	
 	private UserCollection uc;
 	private User u1;
 	private User u2;
@@ -34,27 +35,17 @@ class UserCollectionTest {
 	}
 
 	@Test
-	void testUserCollection() {
-		fail("Not yet implemented");
-	}
-
-	@Test
 	void testGetusers() {
 		List<User> testUc = uc.getusers();
 		return;
 	}
 
 	@Test
-	void testSetusers() {
+	void testAdduser() {
 		List<User> testBc = uc.getusers();
 		assertEquals(testBc.size(), USER_COLLECTION_SIZE);
 		uc.adduser(u1);
 		assertEquals(uc.getusers().size(), USER_COLLECTION_SIZE+1);
-	}
-
-	@Test
-	void testAdduser() {
-		fail("Not yet implemented");
 	}
 
 	@Test

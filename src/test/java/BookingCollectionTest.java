@@ -10,7 +10,6 @@ import classes.Booking;
 import classes.BookingCollection;
 
 class BookingCollectionTest {
-	
 	private BookingCollection bc;
 	private Booking b1;
 	private Booking b2;
