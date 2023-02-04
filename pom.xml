@@ -82,23 +82,23 @@
 		    <version>3.2.3</version>
 		</plugin>
 		<plugin>
-		    <groupId>${jacoco.groupId}</groupId>
+			<groupId>${jacoco.groupId}</groupId>
 		    <artifactId>${jacoco.artifectId}</artifactId>
 		    <version>${jacoco.version}</version>
 		    <executions>
-			    <execution>
+		    	<execution>
 			    	<id>prepare-agent</id>
 			    	<goals>
 			    		<goal>prepare-agent</goal>
 			    	</goals>
-			    </execution>
-			    <execution>
+		    	</execution>
+		    	<execution>
 			    	<id>report</id>
 			    	<phase>verify</phase>
 			    	<goals>
 			    		<goal>report</goal>
 			    	</goals>
-			    </execution>
+		    	</execution>
 		    </executions>
 		</plugin>
     </plugins>
