@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 
 import classes.Booking;
 import classes.BookingCollection;
-import classes.User;
 
 class BookingCollectionTest {
 	private BookingCollection bc;
