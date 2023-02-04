@@ -15,16 +15,8 @@ public class UserCollection {
 		this.capacity = 5;
 	}
 	
-	public UserCollection(int capacity) {
-		this.capacity = capacity;
-	}
-	
 	public List<User> getusers() {
 		return users;
-	}
-
-	public void setusers(ArrayList<User> users) {
-		this.users = users;
 	}
 	
 	public void adduser(User user) {

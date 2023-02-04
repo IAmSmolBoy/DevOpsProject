@@ -15,29 +15,4 @@ public class Booking {
 		this.checkInDate = checkInDate;
 		this.checkOutDate = checkOutDate;
 	}
-	
-	public String getBookerName() {
-		return bookerName;
-	}
-	public void setBookerName(String bookerName) {
-		this.bookerName = bookerName;
-	}
-	public String getHotelName() {
-		return hotelName;
-	}
-	public void setHotelName(String hotelName) {
-		this.hotelName = hotelName;
-	}
-	public Date getCheckInDate() {
-		return checkInDate;
-	}
-	public void setCheckInDate(Date checkInDate) {
-		this.checkInDate = checkInDate;
-	}
-	public Date getCheckOutDate() {
-		return checkOutDate;
-	}
-	public void setCheckOutDate(Date checkOutDate) {
-		this.checkOutDate = checkOutDate;
-	}
 }

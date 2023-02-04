@@ -15,17 +15,9 @@ public class BookingCollection {
 	public BookingCollection() {
 		this.capacity = 5;
 	}
-	
-	public BookingCollection(int capacity) {
-		this.capacity = capacity;
-	}
 
 	public List<Booking> getbookings() {
 		return bookings;
-	}
-
-	public void setbookings(ArrayList<Booking> bookings) {
-		this.bookings = bookings;
 	}
 	
 	public void addbooking(Booking booking) {
