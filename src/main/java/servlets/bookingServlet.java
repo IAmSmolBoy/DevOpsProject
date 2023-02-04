@@ -1,4 +1,4 @@
-
+package servlets;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -10,7 +10,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -20,31 +19,28 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class roomServlet
+ * Servlet implementation class bookingServlet
  */
-@WebServlet("/roomServlet")
-public class roomServlet extends HttpServlet {
+@WebServlet("/bookingServlet")
+public class bookingServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public roomServlet() {
+    public bookingServlet() {
         super();
+        // TODO Auto-generated constructor stub
     }
     
     SQLConnection sqlQueries = new SQLConnection();
-
+    
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
-        	request.setAttribute("rooms", sqlQueries.getTable("rooms"));
-        	request.getRequestDispatcher("/rooms.jsp").forward(request, response);
-        } catch(SQLException e) {
-        	e.printStackTrace();
-    	}
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -54,7 +50,10 @@ public class roomServlet extends HttpServlet {
 		response.setContentType("text/html");
 		try {
 			Map<String, String[]> params = request.getParameterMap();
-			if (sqlQueries.addToTable("rooms", params) > 0) doGet(request, response);
+			if (sqlQueries.addToTable("bookings", params) > 0) {
+		    	request.setAttribute("rooms", sqlQueries.getTable("rooms"));
+		    	request.getRequestDispatcher("/rooms.jsp").forward(request, response);
+			}
 			else {
 				response.getWriter().println("<h1 style='color: red'>An error occurred when saving the data to the database</h1>");
 			}

@@ -14,6 +14,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import classes.Room;
+import servlets.SQLConnection;
 
 class RoomsTest {
 
