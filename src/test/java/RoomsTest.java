@@ -44,6 +44,28 @@ class RoomsTest {
 	}
 
 	@Test
+	void testRoom() {
+		Room room = new Room(
+			null,
+			0,
+			0,
+			null,
+			null
+		);
+		room.setRoomName("Hotel 3");
+		room.setRate(4);
+		room.setPrice(150);
+		room.setImg("https://cdn.loewshotels.com/loewshotels.com-2466770763/cms/cache/v2/5f5a6e0d12749.jpg/1920x1080/fit/80/86e685af18659ee9ecca35c465603812.jpg");
+		room.setDescription("This hotel is quite good");
+		
+		assertEquals(room.getRoomName(), "Hotel 3");
+		assertEquals(room.getRate(), 4);
+		assertEquals(room.getPrice(), 150);
+		assertEquals(room.getImg(), "https://cdn.loewshotels.com/loewshotels.com-2466770763/cms/cache/v2/5f5a6e0d12749.jpg/1920x1080/fit/80/86e685af18659ee9ecca35c465603812.jpg");
+		assertEquals(room.getDescription(), "This hotel is quite good");
+	}
+
+	@Test
 	void testAddToRoomsTable() {
 		Room room = new Room(
 			"Hotel 2",
