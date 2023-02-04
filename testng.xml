@@ -4,9 +4,9 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="selenium.seleniumTest"/>
-      <class name=".RoomsTest"/>
-      <class name=".BookingCollectionTest"/>
-      <class name=".UserCollectionTest"/>
+      <class name="RoomsTest"/>
+      <class name="BookingCollectionTest"/>
+      <class name="UserCollectionTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
